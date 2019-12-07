@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="isound" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3D-bT-R07" customClass="TouchView" customModule="isound" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="562" width="414" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KB-VA-S2s">
+                                        <rect key="frame" x="124" y="125" width="166.5" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unt-Og-Jhk">
+                                        <rect key="frame" x="234" y="0.0" width="180" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="KqY-1F-lAV"/>
+                                            <constraint firstAttribute="height" constant="70" id="gDi-hd-eEv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" title="Replay"/>
+                                        <connections>
+                                            <action selector="touchReplay:" destination="r3D-bT-R07" eventType="touchUpInside" id="hMn-kx-6yv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Unt-Og-Jhk" secondAttribute="trailing" id="0wE-Sq-aG1"/>
+                                    <constraint firstItem="Unt-Og-Jhk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r3D-bT-R07" secondAttribute="leading" constant="16" id="1Iq-Cg-e6I"/>
+                                    <constraint firstItem="2KB-VA-S2s" firstAttribute="centerY" secondItem="r3D-bT-R07" secondAttribute="centerY" id="Oqp-ia-VAW"/>
+                                    <constraint firstItem="Unt-Og-Jhk" firstAttribute="top" secondItem="r3D-bT-R07" secondAttribute="top" id="UEn-cB-7WC"/>
+                                    <constraint firstItem="2KB-VA-S2s" firstAttribute="centerX" secondItem="r3D-bT-R07" secondAttribute="centerX" id="dZn-A0-AQ0"/>
+                                    <constraint firstAttribute="height" constant="300" id="m2p-eG-e8s"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r3D-bT-R07" secondAttribute="trailing" id="72R-KE-CpM"/>
+                            <constraint firstItem="r3D-bT-R07" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CJq-1G-ZkQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r3D-bT-R07" secondAttribute="bottom" id="v6G-B5-qaE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="micView" destination="r3D-bT-R07" id="Qbx-3b-mlA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
